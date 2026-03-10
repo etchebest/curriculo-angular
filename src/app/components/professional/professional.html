@@ -1,0 +1,15 @@
+<section class="professional">
+  <div class="container">
+    <div class="professional__content">
+      <h2 class="professional__title">{{ title() }}</h2>
+
+      <div class="professional__text">
+        @for (paragraph of paragraphs(); track paragraph) {
+          <p class="professional__paragraph">
+            {{ paragraph }}
+          </p>
+        }
+      </div>
+    </div>
+  </div>
+</section>

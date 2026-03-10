@@ -1,0 +1,142 @@
+:host {
+  display: block;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  padding: 7rem 1.25rem 5rem;
+
+  background: radial-gradient(
+    circle at top,
+    var(--color-bg-tertiary) 0%,
+    var(--color-bg-primary) 70%
+  );
+
+  text-align: center;
+
+  &__glow {
+    position: absolute;
+    top: -12.5rem;
+    left: 50%;
+    width: 31.25rem;
+    height: 31.25rem;
+
+    background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+
+    opacity: 0.15;
+    filter: blur(7.5rem);
+
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    width: 9.5rem;
+    height: 9.5rem;
+
+    margin-bottom: 1.5rem;
+
+    border: 0.1875rem solid var(--color-border);
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    box-shadow: 0 1.25rem 2.5rem rgb(0 0 0 / 0.25);
+  }
+
+  &__eyebrow {
+    margin-bottom: 0.75rem;
+
+    color: var(--color-accent);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 0.75rem;
+
+    color: var(--color-text-primary);
+
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-weight: 700;
+
+    line-height: 1.1;
+  }
+
+  &__subtitle {
+    margin-bottom: 1rem;
+
+    color: var(--color-text-secondary);
+
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 500;
+  }
+
+  &__stack {
+    max-width: 50rem;
+
+    margin: 0 auto 2rem;
+
+    color: var(--color-accent);
+
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+    justify-content: center;
+  }
+
+  &__action-link {
+    display: inline-flex;
+    gap: 0.5rem;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 10rem;
+  }
+}
+
+.container {
+  width: min(90%, var(--container-width));
+  margin-inline: auto;
+}
+
+@media (width <= 48rem) {
+  .hero {
+    padding: 5.5rem 1rem 4rem;
+
+    &__image {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    &__actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__action-link {
+      width: min(100%, 18rem);
+    }
+  }
+}

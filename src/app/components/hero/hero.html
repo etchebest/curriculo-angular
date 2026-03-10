@@ -1,0 +1,30 @@
+<section class="hero">
+  <div class="hero__glow"></div>
+  <div class="container hero__content">
+    <img class="hero__image" src="profile.jpg" [alt]="name + ' Desenvolvedor Angular'" />
+    <p class="hero__eyebrow">Portfólio profissional</p>
+    <h1 class="hero__title">{{ name }}</h1>
+    <h2 class="hero__subtitle">{{ role }}</h2>
+    <p class="hero__stack">{{ stack }}</p>
+    <div class="hero__actions">
+      @for (link of links; track link.href) {
+      @if (link.external) {
+      <a class="hero__action-link" mat-raised-button color="primary" [href]="link.href" target="_blank"
+        rel="noopener noreferrer">
+        @if (link.icon) {
+        <mat-icon>{{ link.icon }}</mat-icon>
+        }
+        <span>{{ link.label }}</span>
+      </a>
+      } @else {
+      <a class="hero__action-link" mat-stroked-button [routerLink]="link.href">
+        @if (link.icon) {
+        <mat-icon>{{ link.icon }}</mat-icon>
+        }
+        <span>{{ link.label }}</span>
+      </a>
+      }
+      }
+    </div>
+  </div>
+</section>
