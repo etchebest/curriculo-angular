@@ -8,7 +8,6 @@ import { Metrics } from '../../components/metrics/metrics';
 import { Professional } from '../../components/professional/professional';
 import { Projects } from '../../components/projects/projects';
 import { Skills } from '../../components/skills/skills';
-import { Contact } from '../contact/contact';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +20,6 @@ import { Contact } from '../contact/contact';
     Skills,
     Projects,
     Challenges,
-    Contact,
     Footer,
   ],
   templateUrl: './home.html',

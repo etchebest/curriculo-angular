@@ -1,14 +1,19 @@
 @use '@angular/material' as mat;
 
-@import 'styles/tokens';
-@import 'styles/typography';
-@import 'styles/layout';
+@use 'styles/tokens';
+@use 'styles/typography';
+@use 'styles/layout';
 
 /* Material */
+
 html {
+
+  color-scheme: dark;
+
   @include mat.theme(
     (
       color: (
+        theme-type: dark,
         primary: mat.$azure-palette,
         tertiary: mat.$blue-palette,
       ),
@@ -23,7 +28,6 @@ html {
 }
 
 body {
-  color-scheme: light;
   margin: 0;
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
@@ -32,6 +36,7 @@ body {
 }
 
 /* reset */
+
 *,
 *::before,
 *::after {

@@ -1,168 +1,171 @@
 :host {
   display: block;
-}
 
-/* HERO */
 
-.contact-hero {
-  padding: 6rem 1.25rem 3rem;
 
-  &__back {
-    display: inline-flex;
-    gap: 0.4rem;
-    align-items: center;
+  /* HERO */
 
-    margin-bottom: 1.5rem;
+  .contact-hero {
+    padding: 6rem 1.25rem 3rem;
 
-    color: var(--color-accent);
-    text-decoration: none;
+    &__back {
+      display: inline-flex;
+      gap: 0.4rem;
+      align-items: center;
 
-    transition: opacity 0.2s ease, transform 0.2s ease;
+      margin-bottom: 1.5rem;
+
+      color: var(--color-accent);
+      text-decoration: none;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    &__back:hover {
+      opacity: 0.8;
+      transform: translateX(-2px);
+    }
+
+    &__title {
+      margin-bottom: 0.75rem;
+
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-weight: 700;
+
+      color: var(--color-text-primary);
+    }
+
+    &__subtitle {
+      max-width: 40rem;
+
+      font-size: 1.05rem;
+      line-height: 1.7;
+
+      color: var(--color-text-secondary);
+    }
   }
 
-  &__back:hover {
-    opacity: 0.8;
-    transform: translateX(-2px);
+  /* CONTENT */
+
+  .contact-content {
+
+
+    padding: 2rem 1.25rem 5rem;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+
+      gap: 3rem;
+
+      align-items: start;
+    }
   }
 
-  &__title {
-    margin-bottom: 0.75rem;
+  /* INFO */
 
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    font-weight: 700;
+  .contact-info {
+    &__title {
+      margin-bottom: 1rem;
 
-    color: var(--color-text-primary);
+      font-size: 1.5rem;
+
+      color: var(--color-text-primary);
+    }
+
+    &__text {
+      margin-bottom: 1.5rem;
+
+      line-height: 1.7;
+
+      color: var(--color-text-secondary);
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+
+      gap: 0.8rem;
+    }
+
+    &__item {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+
+      color: var(--color-text-secondary);
+    }
+
+    &__item--whatsapp {
+      a {
+        color: var(--color-success);
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
   }
 
-  &__subtitle {
-    max-width: 40rem;
+  /* FORM */
 
-    font-size: 1.05rem;
-    line-height: 1.7;
-
-    color: var(--color-text-secondary);
-  }
-}
-
-/* CONTENT */
-
-.contact-content {
-  padding: 2rem 1.25rem 5rem;
-
-  &__grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-
-    gap: 3rem;
-
-    align-items: start;
-  }
-}
-
-/* INFO */
-
-.contact-info {
-
-  &__title {
-    margin-bottom: 1rem;
-
-    font-size: 1.5rem;
-
-    color: var(--color-text-primary);
-  }
-
-  &__text {
-    margin-bottom: 1.5rem;
-
-    line-height: 1.7;
-
-    color: var(--color-text-secondary);
-  }
-
-  &__items {
+  .contact-form {
     display: flex;
     flex-direction: column;
 
-    gap: 0.8rem;
-  }
+    gap: 1rem;
 
-  &__item {
-    display: flex;
-    gap: 0.6rem;
-    align-items: center;
+    padding: 1.8rem;
 
-    color: var(--color-text-secondary);
-  }
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
 
-  &__item--whatsapp {
-    a {
+    background: var(--card-bg);
+
+    transition:
+      border-color 0.25s ease,
+      box-shadow 0.25s ease,
+      transform 0.25s ease;
+
+    &__title {
+      margin-bottom: 0.5rem;
+
+      font-size: 1.4rem;
+
+      color: var(--color-text-primary);
+    }
+
+    &__feedback {
+      margin-top: 0.6rem;
+
       color: var(--color-success);
-      font-weight: 500;
-      text-decoration: none;
+
+      font-size: 0.9rem;
     }
   }
-}
 
-/* FORM */
+  /* HOVER DO FORM (corrige o problema do "apagado") */
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
+  .contact-form:hover {
+    border-color: var(--color-accent);
 
-  gap: 1rem;
+    transform: translateY(-2px);
 
-  padding: 1.8rem;
-
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-
-  background: var(--card-bg);
-
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
-
-  &__title {
-    margin-bottom: 0.5rem;
-
-    font-size: 1.4rem;
-
-    color: var(--color-text-primary);
+    box-shadow: 0 10px 30px rgb(0 0 0 / 0.25);
   }
 
-  &__feedback {
-    margin-top: 0.6rem;
+  /* CONTAINER */
 
-    color: var(--color-success);
-
-    font-size: 0.9rem;
+  .container {
+    width: min(90%, var(--container-width));
+    margin-inline: auto;
   }
-}
 
-/* HOVER DO FORM (corrige o problema do "apagado") */
+  /* RESPONSIVE */
 
-.contact-form:hover {
-  border-color: var(--color-accent);
-
-  transform: translateY(-2px);
-
-  box-shadow: 0 10px 30px rgb(0 0 0 / 0.25);
-}
-
-
-
-/* CONTAINER */
-
-.container {
-  width: min(90%, var(--container-width));
-  margin-inline: auto;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-  .contact-content__grid {
-    grid-template-columns: 1fr;
+  @media (max-width: 900px) {
+    .contact-content__grid {
+      grid-template-columns: 1fr;
+    }
   }
 }
