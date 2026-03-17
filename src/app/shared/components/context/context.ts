@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-context',
+  standalone: true,
   imports: [],
   templateUrl: './context.html',
   styleUrl: './context.scss',

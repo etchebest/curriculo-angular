@@ -7,6 +7,7 @@ interface IChallengeItem {
 
 @Component({
   selector: 'app-challenges',
+  standalone: true,
   imports: [],
   templateUrl: './challenges.html',
   styleUrl: './challenges.scss',

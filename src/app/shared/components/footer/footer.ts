@@ -8,6 +8,7 @@ interface IFooterLink {
 }
 @Component({
   selector: 'app-footer',
+  standalone: true,
   imports: [RouterLink],
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
@@ -29,6 +30,10 @@ export class Footer {
       label: 'WhatsApp',
       href: 'https://wa.me/5551989547887?text=Olá%20Cristian,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.',
       external: true,
+    },
+    {
+      label: 'Trajetória',
+      href: '/trajetoria',
     },
   ]);
 }

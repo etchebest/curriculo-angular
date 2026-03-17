@@ -1,12 +1,6 @@
 <section class="contact-hero">
-
   <div class="container">
-
-    <a routerLink="/" class="contact-hero__back">
-      <mat-icon>arrow_back</mat-icon>
-      Voltar
-    </a>
-
+    <app-back-link/>
     <h1 class="contact-hero__title">
       Vamos conversar
     </h1>
@@ -17,18 +11,11 @@
     </p>
 
   </div>
-
 </section>
 
-
 <section class="contact-content">
-
   <div class="container contact-content__grid">
-
-    <!-- INFO -->
-
     <div class="contact-info">
-
       <h2 class="contact-info__title">
         Informações
       </h2>
@@ -39,7 +26,6 @@
       </p>
 
       <div class="contact-info__items">
-
         <div class="contact-info__item">
           <mat-icon>mail</mat-icon>
           <span>cristian.etchebest@gmail.com</span>
@@ -67,11 +53,7 @@
       </div>
     </div>
 
-
-    <!-- FORM -->
-
     <form class="contact-form" [formGroup]="form" (ngSubmit)="submit()">
-
       <h2 class="contact-form__title">
         Enviar mensagem
       </h2>
@@ -108,9 +90,6 @@
       }
 
     </form>
-
   </div>
-
 </section>
-
 <app-footer />

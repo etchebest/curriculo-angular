@@ -8,12 +8,13 @@ interface IHeroLink {
   href: string;
   external?: boolean;
   icon?: string;
+  variant: string;
 }
 
 @Component({
   selector: 'app-hero',
 
-  imports: [MatButtonModule, MatIconModule,RouterLink],
+  imports: [MatButtonModule, MatIconModule, RouterLink],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
@@ -30,12 +31,14 @@ export class Hero {
       href: 'https://linkedin.com/in/cristianetchebest',
       external: true,
       icon: 'open_in_new',
+      variant: 'primary',
     },
     {
       label: 'Contato',
       href: '/contato',
       external: false,
       icon: 'mail',
+      variant: 'contact',
     },
   ];
 }

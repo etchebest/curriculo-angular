@@ -6,19 +6,20 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { RouterLink } from '@angular/router';
-import { Footer } from '../../components/footer/footer';
+import { Footer } from '../../shared/components/footer/footer';
 import { timeout } from 'rxjs';
+import { BackLink } from '../../shared/components/back-link/back-link';
 
 @Component({
   selector: 'app-contact',
   imports: [
     ReactiveFormsModule,
-    RouterLink,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
     Footer,
+    BackLink
   ],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',

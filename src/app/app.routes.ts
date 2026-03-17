@@ -1,15 +1,20 @@
 import { Routes } from '@angular/router';
-import { Home } from './pages/home/home';
-import { Contact } from './pages/contact/contact';
 
 export const routes: Routes = [
   {
     path: '',
-    component: Home,
+    loadComponent: () => import('./pages/home/home').then((m) => m.Home),
   },
+
   {
     path: 'contato',
-    component: Contact,
+    title:'Fale comigo | Cristian Etchebest',
+    loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
+  },
+    {
+    path: 'trajetoria',
+    title:'Trajetória | Cristian Etchebest',
+    loadComponent: () => import('./pages/trajetoria/trajetoria').then((m) => m.Trajetoria),
   },
   {
     path: '**',

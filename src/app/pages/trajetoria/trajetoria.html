@@ -1,0 +1,58 @@
+
+
+<section class="career-hero">
+  <app-back-link />
+
+  <h1>Minha Trajetória Profissional</h1>
+  <p class="career-subtitle">
+    Uma jornada construída através da curiosidade por tecnologia,
+    adaptação constante e evolução profissional.
+  </p>
+  <div class="career-highlights">
+    <div>
+      <strong>20+ anos</strong>
+      <span>experiência profissional</span>
+    </div>
+    <div>
+      <strong>6+ anos</strong>
+      <span>desenvolvendo software</span>
+    </div>
+    <div>
+      <strong>Especialista</strong>
+      <span>Angular & aplicações corporativas</span>
+    </div>
+  </div>
+</section>
+
+<section class="timeline">
+  @for (item of career; track item.period) {
+    <div class="timeline-item" [class.left]="item.side === 'left'" [class.right]="item.side === 'right'">
+      <div class="timeline-card">
+        <span class="timeline-phase">
+          {{ item.phase }}
+        </span>
+        <h3>
+          {{ item.period }}
+        </h3>
+        <h4>
+          {{ item.title }}
+        </h4>
+        @for (line of item.description; track line) {
+          <p>{{ line }}</p>
+        }
+      </div>
+    </div>
+  }
+</section>
+
+<section class="career-future">
+  <h2>O próximo capítulo</h2>
+  <p>
+    A história continua sendo escrita.
+  </p>
+  <p>
+    Sempre aprendendo, evoluindo e construindo novas soluções através da tecnologia.
+  </p>
+</section>
+<app-footer />
+
