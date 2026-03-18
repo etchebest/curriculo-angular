@@ -14,6 +14,7 @@ interface IProjectGroup {
 
 @Component({
   selector: 'app-projects',
+  standalone:true,
   imports: [],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',

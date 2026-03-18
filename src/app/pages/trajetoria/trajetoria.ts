@@ -1,16 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Footer } from '../../shared/components/footer/footer';
 import { ICareerItem } from '../../core/interfaces/career-item.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { BackLink } from '../../shared/components/back-link/back-link';
+import { IHeader } from '../../core/interfaces/header.interface';
+import { Header } from '../../shared/components/header/header';
 
 @Component({
   selector: 'app-trajetoria',
-  imports: [Footer,MatIconModule, BackLink],
+  imports: [Footer, MatIconModule, BackLink, Header],
   templateUrl: './trajetoria.html',
   styleUrl: './trajetoria.scss',
 })
 export class Trajetoria {
+
+  public headerData = signal<IHeader>({
+    pageName: 'Trajetória',
+    title: 'Minha Trajetória Profissional',
+    subtitle:
+      'Uma jornada construída através da curiosidade por tecnologia, adaptação constante e evolução profissional.',
+  });
+
   readonly career: ICareerItem[] = [
     {
       period: '2000 — 2004',
@@ -75,7 +85,7 @@ export class Trajetoria {
     {
       side: 'right',
       period: '2023 — Presente',
-      title: 'Desenvolvedor Front-End — Grupo Madero',
+      title: 'Desenvolvedor Front-End (Full Stack) — Grupo Madero',
       phase: '🚀 Projetos Corporativos',
       description: [
         'Atuação no desenvolvimento e evolução de sistemas corporativos internos.',

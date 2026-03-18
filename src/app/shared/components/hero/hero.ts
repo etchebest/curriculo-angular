@@ -13,7 +13,7 @@ interface IHeroLink {
 
 @Component({
   selector: 'app-hero',
-
+standalone:true,
   imports: [MatButtonModule, MatIconModule, RouterLink],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',

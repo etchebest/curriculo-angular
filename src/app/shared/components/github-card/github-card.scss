@@ -1,0 +1,133 @@
+:host {
+  display: block;
+}
+
+/* ======================================================
+   CARD BASE
+====================================================== */
+
+.github-card {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1.25rem;
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+
+  background: var(--card-bg);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  /* glow interno */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(circle at top, var(--color-accent), transparent 70%);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+
+    border-color: rgb(56 189 248 / 0.4);
+
+    box-shadow:
+      0 10px 30px rgb(0 0 0 / 0.25),
+      0 0 0 1px rgb(56 189 248 / 0.1);
+
+    &::before {
+      opacity: 0.08;
+    }
+  }
+
+  /* ======================================================
+     HEADER
+  ====================================================== */
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    color: var(--color-text-primary);
+
+    word-break: break-word;
+  }
+
+  &__meta {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  &__language {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  &__stars {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+  }
+
+  /* ======================================================
+     DESCRIPTION
+  ====================================================== */
+
+  &__description {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+
+    line-height: 1.6;
+
+    min-height: 3rem;
+  }
+
+  /* ======================================================
+     FOOTER
+  ====================================================== */
+
+  &__footer {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+  }
+
+  &__link {
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    color: var(--color-accent);
+    text-decoration: none;
+
+    position: relative;
+
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &--live {
+      color: var(--color-success);
+    }
+  }
+}

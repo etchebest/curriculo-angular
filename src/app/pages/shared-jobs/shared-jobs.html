@@ -1,1 +1,21 @@
-<p>shared-jobs works!</p>
+<app-header [headerData]="headerData()" />
+
+<section class="container">
+  <div class="content">
+    @if(loading()){
+    <div class="content__spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+    }@else {
+    <div class="content__github-grid">
+      @for (repo of repositories(); track repo.id) {
+      <app-github-card [repo]="repo" />
+      }
+    </div>
+    }
+
+  </div>
+
+</section>
+
+<app-footer />

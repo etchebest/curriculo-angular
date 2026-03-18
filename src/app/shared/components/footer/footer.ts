@@ -35,5 +35,9 @@ export class Footer {
       label: 'Trajetória',
       href: '/trajetoria',
     },
+    {
+      label: 'Projetos',
+      href: '/projetos-compartilhados',
+    },
   ]);
 }

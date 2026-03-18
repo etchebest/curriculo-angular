@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-github-projects',
+  standalone:true,
   imports: [MatIconModule, RouterLink],
   templateUrl: './github-projects.html',
   styleUrl: './github-projects.scss',

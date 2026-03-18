@@ -1,31 +1,10 @@
 :host {
   display: block;
 
-
-
   .career-hero {
     text-align: center;
-    padding-top: var(--hero-padding-top);
-    padding-bottom: var(--hero-padding-bottom);
-
-    max-width: 40rem;
+    max-width: 50rem;
     margin-inline: auto;
-
-    &__back {
-      display: inline-flex;
-      gap: 0.4rem;
-      width: 100%;
-      align-items: flex-start;
-
-      margin-bottom: 1.5rem;
-
-      color: var(--color-accent);
-      text-decoration: none;
-
-      transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
-    }
 
     .career-subtitle {
       margin-top: 1rem;

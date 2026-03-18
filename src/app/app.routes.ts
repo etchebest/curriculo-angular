@@ -17,6 +17,11 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/trajetoria/trajetoria').then((m) => m.Trajetoria),
   },
   {
+    path: 'projetos-compartilhados',
+    title:'Projetos do Github | Cristian Etchebest',
+    loadComponent: () => import('./pages/shared-jobs/shared-jobs').then((m) => m.SharedJobs),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

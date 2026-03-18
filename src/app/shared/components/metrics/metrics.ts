@@ -8,6 +8,7 @@ interface IMetricItem {
 
 @Component({
   selector: 'app-metrics',
+  standalone:true,
   imports: [MatCardModule],
   templateUrl: './metrics.html',
   styleUrl: './metrics.scss',

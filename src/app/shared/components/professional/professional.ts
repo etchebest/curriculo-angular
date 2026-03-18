@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-professional',
+  standalone:true,
   imports: [],
   templateUrl: './professional.html',
   styleUrl: './professional.scss',

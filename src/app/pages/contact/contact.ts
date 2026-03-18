@@ -5,13 +5,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { RouterLink } from '@angular/router';
 import { Footer } from '../../shared/components/footer/footer';
 import { timeout } from 'rxjs';
 import { BackLink } from '../../shared/components/back-link/back-link';
+import { Header } from '../../shared/components/header/header';
+import { IHeader } from '../../core/interfaces/header.interface';
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
   imports: [
     ReactiveFormsModule,
     MatButtonModule,
@@ -19,7 +21,8 @@ import { BackLink } from '../../shared/components/back-link/back-link';
     MatInputModule,
     MatIconModule,
     Footer,
-    BackLink
+    BackLink,
+    Header,
   ],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
@@ -31,6 +34,12 @@ export class Contact {
   readonly loading = signal(false);
   readonly feedback = signal('');
   readonly error = signal(false);
+  readonly headerData = signal<IHeader>({
+    pageName: 'Fale comigo',
+    title: 'Vamos conversar',
+    subtitle:
+      'Se você tem um projeto, oportunidade ou quer trocar ideias sobre tecnologia, envie uma mensagem. Responderei o mais breve possível.',
+  });
 
   readonly form = this.fb.nonNullable.group({
     nome: ['', [Validators.required, Validators.minLength(3)]],

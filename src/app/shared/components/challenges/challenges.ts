@@ -17,8 +17,8 @@ export class Challenges {
 
   readonly challenges = signal<IChallengeItem[]>([
     {
-      title: 'Refatoração Angular v19',
-      description: 'Modernização da interface utilizando Signals, Control Flow e Angular Material.',
+      title: 'Refatoração Angular v12',
+      description: 'Modernização dos aplicativos da v12 para v20+ e implementando novas técnologias como Signals, Control Flow e Angular Material.',
     },
     {
       title: 'Arquitetura Front-End Modular',
