@@ -1,0 +1,14 @@
+<section class="metrics">
+  <div class="container">
+    <div class="metrics__grid">
+      @for (metric of metrics(); track metric.label) {
+        <mat-card class="metrics__card" appearance="outlined">
+          <mat-card-content class="metrics__card-content">
+            <strong class="metrics__value">{{ metric.value }}</strong>
+            <p class="metrics__label">{{ metric.label }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>

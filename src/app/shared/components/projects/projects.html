@@ -1,0 +1,30 @@
+<section class="projects">
+  <div class="container">
+    @for (group of groups(); track group.title) {
+      <div class="projects__group">
+        <h2 class="projects__group-title">{{ group.title }}</h2>
+
+        <div class="projects__grid">
+          @for (project of group.projects; track project.title) {
+            <article class="projects__card">
+              <img
+                class="projects__image"
+                [src]="project.imageUrl"
+                [alt]="project.imageAlt"
+                loading="lazy"
+              />
+
+              <div class="projects__body">
+                <h3 class="projects__title">{{ project.title }}</h3>
+
+                <p class="projects__description">
+                  {{ project.description }}
+                </p>
+              </div>
+            </article>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

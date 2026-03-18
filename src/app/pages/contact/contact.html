@@ -1,0 +1,82 @@
+<app-header [headerData]="headerData()" />
+
+<section class="contact-content">
+  <div class="container contact-content__grid">
+    <div class="contact-info">
+      <h2 class="contact-info__title">
+        Informações
+      </h2>
+
+      <p class="contact-info__text">
+        Atualmente trabalho com desenvolvimento de sistemas corporativos
+        utilizando Angular, TypeScript e arquitetura moderna de front-end.
+      </p>
+
+      <div class="contact-info__items">
+        <div class="contact-info__item">
+          <mat-icon>mail</mat-icon>
+          <span>cristian.etchebest@gmail.com</span>
+        </div>
+
+        <div class="contact-info__item">
+          <mat-icon>business_center</mat-icon>
+          <span>Front-End Developer</span>
+        </div>
+
+        <div class="contact-info__item">
+          <mat-icon>language</mat-icon>
+          <a href="https://linkedin.com/in/cristianetchebest" target="_blank" rel="noopener">
+            linkedin
+          </a>
+        </div>
+
+        <div class="contact-info__item contact-info__item--whatsapp">
+          <mat-icon>chat</mat-icon>
+          <a href="https://wa.me/5551989547887?text=Olá%20Cristian,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+            target="_blank" rel="noopener">
+            Conversar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" [formGroup]="form" (ngSubmit)="submit()">
+      <h2 class="contact-form__title">
+        Enviar mensagem
+      </h2>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Mensagem</mat-label>
+        <textarea matInput rows="6" formControlName="mensagem"></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="loading() || form.invalid">
+
+        @if(loading()){
+        Enviando...
+        } @else {
+        Enviar mensagem
+        }
+
+      </button>
+
+      @if(feedback()){
+      <p class="contact-form__feedback">
+        {{ feedback() }}
+      </p>
+      }
+
+    </form>
+  </div>
+</section>
+<app-footer />

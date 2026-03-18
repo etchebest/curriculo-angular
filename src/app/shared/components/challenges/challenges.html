@@ -1,0 +1,21 @@
+<section class="challenges">
+  <div class="container">
+    <div class="challenges__content">
+      <h2 class="challenges__title">{{ title() }}</h2>
+
+      <div class="challenges__grid">
+        @for (challenge of challenges(); track challenge.title) {
+          <article class="challenges__card">
+            <h3 class="challenges__card-title">
+              {{ challenge.title }}
+            </h3>
+
+            <p class="challenges__card-description">
+              {{ challenge.description }}
+            </p>
+          </article>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+:root {
+  /* COLORS */
+  --color-bg-primary: #020617;
+  --color-bg-secondary: #0f172a;
+  --color-bg-tertiary: #1e293b;
+
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #94a3b8;
+
+  --color-border: rgb(255 255 255 / 0.06);
+
+  --color-accent: #38bdf8;
+
+  /* CARD */
+  --card-bg: rgb(15 23 42 / 0.7);
+
+  /* RADIUS */
+  --radius-md: 1rem;
+
+  /* CONTAINER */
+  --container-width: 68.75rem;
+
+  /* SPACING */
+  --section-padding: 4.5rem;
+
+  /* SUCCESS / STATUS */
+  --color-success: #22c55e;
+
+  /* HERO SPACING */
+  --hero-padding-top: 6rem;
+  --hero-padding-bottom: 3rem;
+
+  /* CONTACT LAYOUT */
+  --contact-grid-gap: 3rem;
+
+  /* FORM */
+  --form-bg: rgb(15 23 42 / 0.6);
+
+  /* TEXT WIDTH */
+  --text-width-md: 40rem;
+}

@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  width: 100%;
+  padding: 0px 8px 8px;
+
+  .back-link {
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-accent);
+    text-decoration: none;
+
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .back-link mat-icon {
+    font-size: 1.1rem;
+    max-width: max-content;
+    max-height: max-content;
+  }
+
+  .back-link:hover {
+    opacity: 0.8;
+    transform: translateX(-2px);
+  }
+}

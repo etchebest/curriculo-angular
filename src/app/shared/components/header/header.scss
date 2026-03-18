@@ -1,0 +1,35 @@
+:host {
+  display: block;
+
+  margin: 5rem auto 3.5rem;
+  max-width: 80rem;
+
+  .header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__page-name {
+      margin-bottom: 0.75rem;
+
+      color: var(--color-accent);
+
+      font-size: 0.85rem;
+      font-weight: 600;
+
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    &__title {
+      margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+      max-width: 85%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<article class="github-card">
+  <div class="github-card__header">
+    <h3 class="github-card__title">
+      {{ repo().name }}
+    </h3>
+
+    <div class="github-card__meta">
+      <span class="github-card__language">
+        {{ repo().language }}
+      </span>
+
+      <span class="github-card__stars">
+        ⭐ {{ repo().stargazers_count }}
+      </span>
+    </div>
+  </div>
+
+  <p class="github-card__description">
+    {{ repo().description }}
+  </p>
+
+  <div class="github-card__footer">
+    @if (repo().homepage) {
+    <a class="github-card__link github-card__link--live" [href]="repo().homepage" target="_blank">
+      Live
+    </a>
+    }
+    <a class="github-card__link" [href]="repo().html_url" target="_blank">
+      Código
+    </a>
+  </div>
+
+</article>

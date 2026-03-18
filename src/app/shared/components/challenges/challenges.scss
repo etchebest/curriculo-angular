@@ -1,0 +1,83 @@
+:host {
+  display: block;
+}
+
+.challenges {
+  padding: 0 1.25rem var(--section-padding);
+
+  &__content {
+    max-width: var(--container-width);
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-primary);
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--card-bg);
+
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  &__card:hover {
+    border-color: rgb(56 189 248 / 0.45);
+    transform: translateY(-0.25rem);
+    box-shadow: 0 1.25rem 2.5rem rgb(0 0 0 / 0.18);
+  }
+
+  &__card-title {
+    color: var(--color-text-primary);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  &__card-description {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+.container {
+  width: min(90%, var(--container-width));
+  margin-inline: auto;
+}
+
+@media (width <= 64rem) {
+  .challenges {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (width <= 36rem) {
+  .challenges {
+    padding: 0 1rem 3.5rem;
+
+    &__card {
+      padding: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<section class="context">
+  <div class="container">
+    <div class="context__content">
+      <h2 class="context__title">{{ title() }}</h2>
+
+      <ul class="context__list">
+        @for (item of items(); track item) {
+        <li class="context__item">
+          {{ item }}
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>
