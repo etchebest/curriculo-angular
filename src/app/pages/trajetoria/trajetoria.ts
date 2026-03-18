@@ -2,13 +2,12 @@ import { Component, signal } from '@angular/core';
 import { Footer } from '../../shared/components/footer/footer';
 import { ICareerItem } from '../../core/interfaces/career-item.interface';
 import { MatIconModule } from '@angular/material/icon';
-import { BackLink } from '../../shared/components/back-link/back-link';
 import { IHeader } from '../../core/interfaces/header.interface';
 import { Header } from '../../shared/components/header/header';
 
 @Component({
   selector: 'app-trajetoria',
-  imports: [Footer, MatIconModule, BackLink, Header],
+  imports: [Footer, MatIconModule, Header],
   templateUrl: './trajetoria.html',
   styleUrl: './trajetoria.scss',
 })

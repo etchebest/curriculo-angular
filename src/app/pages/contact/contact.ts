@@ -7,7 +7,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { Footer } from '../../shared/components/footer/footer';
 import { timeout } from 'rxjs';
-import { BackLink } from '../../shared/components/back-link/back-link';
 import { Header } from '../../shared/components/header/header';
 import { IHeader } from '../../core/interfaces/header.interface';
 
@@ -21,7 +20,6 @@ import { IHeader } from '../../core/interfaces/header.interface';
     MatInputModule,
     MatIconModule,
     Footer,
-    BackLink,
     Header,
   ],
   templateUrl: './contact.html',
