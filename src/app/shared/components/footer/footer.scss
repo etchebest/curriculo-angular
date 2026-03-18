@@ -36,11 +36,13 @@
 
   &__links {
     display: flex;
+    flex-flow: row wrap;
     gap: 1.2rem;
   }
 
   &__link {
     font-size: 0.9rem;
+    width: 70px;
     text-decoration: none;
     color: var(--color-text-secondary);
     transition: color 0.2s ease;
