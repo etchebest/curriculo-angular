@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, Observable, of, tap } from 'rxjs';
 
 import { IGithubRepository } from '../interfaces/github-repository.interface';
 import { environment } from '../../../environments/environment';
@@ -23,15 +23,35 @@ export class GithubService {
   });
 
   /**
-   * Busca todos os repositórios públicos do usuário
+   * Busca todos os repositórios públicos do usuário com cache de 30 minutos
    */
   getRepositories(): Observable<IGithubRepository[]> {
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      const cached = localStorage.getItem('github_repos');
+      const cachedTime = localStorage.getItem('github_repos_time');
+      if (cached && cachedTime) {
+        const age = Date.now() - Number(cachedTime);
+        if (age < 30 * 60 * 1000) { // 30 minutos
+          return of(JSON.parse(cached));
+        }
+      }
+    }
+
     const url = `${this.baseUrl}${this.queryParams}`;
 
     return this.http
       .get<any[]>(url, { headers: this.headers })
-      .pipe(map((repos) => this.filterRepositories(repos.map(GithubRepositoryModel.fromApi))));
+      .pipe(
+        map((repos) => this.filterRepositories(repos.map(GithubRepositoryModel.fromApi))),
+        tap((filtered) => {
+          if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+            localStorage.setItem('github_repos', JSON.stringify(filtered));
+            localStorage.setItem('github_repos_time', String(Date.now()));
+          }
+        })
+      );
   }
+
 
   /**
    * Filtra repositórios que fazem sentido para o portfólio

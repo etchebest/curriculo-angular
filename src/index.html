@@ -11,14 +11,24 @@
     content="Cristian Etchebest é desenvolvedor Front-End especializado em Angular, TypeScript e aplicações web corporativas. Experiência em sistemas administrativos, Firebase, APIs e arquitetura moderna de software.">
 
   <meta name="author" content="Cristian Etchebest">
+  <meta name="copyright" content="Cristian Etchebest">
 
   <meta name="keywords"
     content="Cristian Etchebest, Angular developer, Front-End Developer, TypeScript developer, Software Engineer, desenvolvimento web, Angular especialista, Firebase developer, Node.js developer">
 
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  
+  <!-- Geo Tags (Local SEO - Porto Alegre, RS) -->
+  <meta name="geo.region" content="BR-RS">
+  <meta name="geo.placename" content="Porto Alegre">
+  <meta name="geo.position" content="-30.0346;-51.2177">
+  <meta name="ICBM" content="-30.0346, -51.2177">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <meta name="theme-color" content="#020617">
+  <meta name="format-detection" content="telephone=no">
 
   <link rel="canonical" href="https://cristianetchebest.com">
 
@@ -39,49 +49,77 @@
   <meta name="twitter:image" content="https://cristianetchebest.com/profile.jpg">
   <meta name="twitter:creator" content="@Cristian_POA">
 
+  <!-- Fonts (Otimização de Performance: requisição combinada) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.png" type="image/png">
 
-  <!-- STRUCTURED DATA -->
-
+  <!-- STRUCTURED DATA (Google Rich Snippets - Schema Graph Completo) -->
   <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Person",
- "name": "Cristian Etchebest",
- "url": "https://cristianetchebest.com",
- "image": "https://cristianetchebest.com/profile.jpg",
- "email": "mailto:contato@cristianetchebest.com",
- "jobTitle": "Front-End Developer",
- "description": "Front-End Developer especializado em Angular, TypeScript e aplicações web corporativas.",
- "inLanguage": "pt-BR",
-
- "sameAs": [
-   "https://linkedin.com/in/cristianetchebest",
-   "https://github.com/cristianetchebest"
- ],
-
- "hasOccupation": {
-   "@type": "Occupation",
-   "name": "Front-End Developer",
-   "skills": [
-     "Angular",
-     "TypeScript",
-     "JavaScript",
-     "Node.js",
-     "Firebase",
-     "Software Engineering"
-   ]
- }
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://cristianetchebest.com/#person",
+        "name": "Cristian Etchebest",
+        "url": "https://cristianetchebest.com",
+        "image": "https://cristianetchebest.com/profile.jpg",
+        "email": "mailto:contato@cristianetchebest.com",
+        "jobTitle": "Front-End Developer",
+        "description": "Front-End Developer especializado em Angular, TypeScript e aplicações web corporativas.",
+        "inLanguage": "pt-BR",
+        "sameAs": [
+          "https://linkedin.com/in/cristianetchebest",
+          "https://github.com/cristianetchebest"
+        ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Front-End Developer",
+          "skills": [
+            "Angular",
+            "TypeScript",
+            "JavaScript",
+            "Node.js",
+            "Firebase",
+            "Software Engineering",
+            "Signals",
+            "Clean Architecture",
+            "SCSS"
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://cristianetchebest.com/#website",
+        "url": "https://cristianetchebest.com",
+        "name": "Cristian Etchebest | Angular Front-End Developer",
+        "description": "Portfólio profissional de Cristian Etchebest, desenvolvedor Front-End especializado em Angular e aplicações corporativas.",
+        "publisher": {
+          "@id": "https://cristianetchebest.com/#person"
+        },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://cristianetchebest.com/#profilepage",
+        "url": "https://cristianetchebest.com",
+        "name": "Portfólio Profissional de Cristian Etchebest",
+        "about": {
+          "@id": "https://cristianetchebest.com/#person"
+        },
+        "isPartOf": {
+          "@id": "https://cristianetchebest.com/#website"
+        },
+        "inLanguage": "pt-BR"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -89,3 +127,4 @@
 </body>
 
 </html>
+

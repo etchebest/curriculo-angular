@@ -52,3 +52,53 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* Ajuste de scroll para âncoras (altura da navbar fixa + folga) */
+html {
+  scroll-padding-top: 5.5rem;
+}
+
+/* Brilho radial dinâmico seguindo o cursor */
+body {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(
+      600px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+      rgba(56, 189, 248, 0.04),
+      transparent 80%
+    );
+  }
+}
+
+/* Utilitários premium */
+.glass-effect {
+  background: rgb(15 23 42 / 0.65) !important;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgb(255 255 255 / 0.05);
+}
+
+.premium-card {
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgb(56 189 248 / 0.2) !important;
+    box-shadow:
+      0 12px 30px rgb(0 0 0 / 0.4),
+      0 0 20px rgb(56 189 248 / 0.1);
+  }
+}
+

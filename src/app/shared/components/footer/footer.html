@@ -12,15 +12,15 @@
       <nav class="footer__links">
 
         @for (link of links(); track link.label) {
-        @if (link.external) {
-        <a class="footer__link" [href]="link.href" target="_blank" rel="noopener">
-          {{ link.label }}
-        </a>
-        } @else {
-        <a class="footer__link" [routerLink]="link.href">
-          {{ link.label }}
-        </a>
-        }
+          @if (link.external) {
+            <a class="footer__link" [href]="link.href" target="_blank" rel="noopener">
+              {{ link.label }}
+            </a>
+          } @else {
+            <a class="footer__link" [routerLink]="link.href">
+              {{ link.label }}
+            </a>
+          }
         }
 
       </nav>
