@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { About } from '../../shared/components/about/about';
 import { Challenges } from '../../shared/components/challenges/challenges';
 import { Context } from '../../shared/components/context/context';
@@ -26,7 +26,9 @@ import { GithubProjects } from '../../shared/components/github-projects/github-p
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home {
   protected readonly title = signal('curriculo');
 }
+

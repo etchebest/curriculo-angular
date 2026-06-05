@@ -1,10 +1,47 @@
-<app-hero />
+<app-hero id="home" />
 <app-metrics />
-<app-about />
-<app-context />
-<app-professional />
-<app-skills />
-<app-projects />
-<app-challenges />
-<app-github-projects />
+
+@defer (on viewport) {
+  <app-about id="sobre" />
+} @placeholder {
+  <div style="height: 300px; background: rgba(255, 255, 255, 0.01); margin: 2rem 0; border-radius: 1rem; border: 1px dashed rgba(255,255,255,0.05);"></div>
+}
+
+@defer (on viewport) {
+  <app-context />
+} @placeholder {
+  <div style="height: 200px; background: rgba(255, 255, 255, 0.01); margin: 2rem 0; border-radius: 1rem; border: 1px dashed rgba(255,255,255,0.05);"></div>
+}
+
+@defer (on viewport) {
+  <app-professional />
+} @placeholder {
+  <div style="height: 200px; background: rgba(255, 255, 255, 0.01); margin: 2rem 0; border-radius: 1rem; border: 1px dashed rgba(255,255,255,0.05);"></div>
+}
+
+@defer (on viewport) {
+  <app-skills id="tecnologias" />
+} @placeholder {
+  <div style="height: 250px; background: rgba(255, 255, 255, 0.01); margin: 2rem 0; border-radius: 1rem; border: 1px dashed rgba(255,255,255,0.05);"></div>
+}
+
+@defer (on viewport) {
+  <app-projects id="projetos" />
+} @placeholder {
+  <div style="height: 400px; background: rgba(255, 255, 255, 0.01); margin: 2rem 0; border-radius: 1rem; border: 1px dashed rgba(255,255,255,0.05);"></div>
+}
+
+@defer (on viewport) {
+  <app-challenges />
+} @placeholder {
+  <div style="height: 250px; background: rgba(255, 255, 255, 0.01); margin: 2rem 0; border-radius: 1rem; border: 1px dashed rgba(255,255,255,0.05);"></div>
+}
+
+@defer (on viewport) {
+  <app-github-projects />
+} @placeholder {
+  <div style="height: 250px; background: rgba(255, 255, 255, 0.01); margin: 2rem 0; border-radius: 1rem; border: 1px dashed rgba(255,255,255,0.05);"></div>
+}
+
 <app-footer />
+

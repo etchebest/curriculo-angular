@@ -1,7 +1,7 @@
 <section class="hero">
   <div class="hero__glow"></div>
   <div class="container hero__content">
-    <img class="hero__image" src="profile.jpg" [alt]="name + ' Desenvolvedor Angular'" />
+    <img class="hero__image" ngSrc="profile.jpg" width="152" height="152" priority [alt]="name + ' Desenvolvedor Angular'" />
     <p class="hero__eyebrow">Portfólio profissional</p>
     <h1 class="hero__title">{{ name }}</h1>
     <h2 class="hero__subtitle">{{ role }}</h2>
@@ -31,6 +31,12 @@
         }
       }
 
+      <a class="hero__action-link hero__action-link--cv" mat-stroked-button href="curriculo-cristian-etchebest.pdf" download="curriculo-cristian-etchebest.pdf">
+        <mat-icon>download</mat-icon>
+        <span>Baixar CV (PDF)</span>
+      </a>
+
     </div>
   </div>
 </section>
+

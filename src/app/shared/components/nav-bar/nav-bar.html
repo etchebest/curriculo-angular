@@ -1,0 +1,49 @@
+<nav class="navbar glass-effect">
+  <div class="navbar__container">
+    <!-- Branding -->
+    <a routerLink="/" class="navbar__brand" (click)="scrollToSection('home')">
+      <span class="navbar__brand-name">Cristian Etchebest</span>
+      <div class="navbar__status">
+        <span class="navbar__status-dot"></span>
+        <span class="navbar__status-text">Disponível</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="navbar__menu">
+      <a class="navbar__link" (click)="scrollToSection('sobre')">Sobre</a>
+      <a class="navbar__link" (click)="scrollToSection('tecnologias')">Tecnologias</a>
+      <a class="navbar__link" (click)="scrollToSection('projetos')">Projetos</a>
+      <a routerLink="/trajetoria" routerLinkActive="navbar__link--active" class="navbar__link" (click)="closeMenu()">História</a>
+      <a routerLink="/projetos-compartilhados" routerLinkActive="navbar__link--active" class="navbar__link" (click)="closeMenu()">GitHub</a>
+      <a routerLink="/contato" routerLinkActive="navbar__link--active" class="navbar__link" (click)="closeMenu()">Contato</a>
+    </div>
+
+    <!-- Actions -->
+    <div class="navbar__actions">
+      <a href="curriculo-cristian-etchebest.pdf" target="_blank" class="navbar__cv-btn" mat-stroked-button>
+        <mat-icon>download</mat-icon>
+        <span>Baixar CV</span>
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="navbar__toggle" (click)="toggleMenu()" aria-label="Toggle menu" mat-icon-button>
+        <mat-icon>{{ isMenuOpen() ? 'close' : 'menu' }}</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="navbar__mobile-drawer glass-effect" [class.navbar__mobile-drawer--open]="isMenuOpen()">
+    <a class="navbar__mobile-link" (click)="scrollToSection('sobre')">Sobre</a>
+    <a class="navbar__mobile-link" (click)="scrollToSection('tecnologias')">Tecnologias</a>
+    <a class="navbar__mobile-link" (click)="scrollToSection('projetos')">Projetos</a>
+    <a routerLink="/trajetoria" routerLinkActive="navbar__mobile-link--active" class="navbar__mobile-link" (click)="closeMenu()">História</a>
+    <a routerLink="/projetos-compartilhados" routerLinkActive="navbar__mobile-link--active" class="navbar__mobile-link" (click)="closeMenu()">GitHub</a>
+    <a routerLink="/contato" routerLinkActive="navbar__mobile-link--active" class="navbar__mobile-link" (click)="closeMenu()">Contato</a>
+    <a href="curriculo-cristian-etchebest.pdf" target="_blank" class="navbar__mobile-cv-btn" mat-raised-button color="primary" (click)="closeMenu()">
+      <mat-icon>download</mat-icon>
+      <span>Baixar CV</span>
+    </a>
+  </div>
+</nav>

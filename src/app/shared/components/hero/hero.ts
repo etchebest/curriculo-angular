@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
 
 interface IHeroLink {
   label: string;
@@ -14,7 +15,7 @@ interface IHeroLink {
 @Component({
   selector: 'app-hero',
 standalone:true,
-  imports: [MatButtonModule, MatIconModule, RouterLink],
+  imports: [MatButtonModule, MatIconModule, RouterLink, NgOptimizedImage],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
